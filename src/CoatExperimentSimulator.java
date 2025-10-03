@@ -39,7 +39,6 @@ public class CoatExperimentSimulator {
         int total = 0;
         for (int val : results) {
             total += val;
-            int hello =1;
         }
         return (double) total / results.length;
     }
