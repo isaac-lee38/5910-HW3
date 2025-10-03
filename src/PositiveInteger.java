@@ -13,13 +13,13 @@ public class PositiveInteger {
         if (num!=1) {
             sum += 1;
         }
-        for (int i =2 ; i<=sqrt(num);i++){
+        for (int i =2 ; i*i<=num;i++){
             if (num%i==0){
                 sum+=i;
-                sum+= (num/i);
+                if (i != num/i) sum+= (num/i);
             }
         }
-        System.out.println (sum);
+        //System.out.println (sum);
         if (sum==num){
             return true;
         }
@@ -32,13 +32,13 @@ public class PositiveInteger {
         if (num!=1) {
             sum += 1;
         }
-        for (int i =2 ; i<=sqrt(num);i++){
+        for (int i =2 ; i*i<=num;i++){
             if (num%i==0){
                 sum+=i;
-                sum+= (num/i);
+                if (i != num/i) sum+= (num/i);
             }
         }
-        System.out.println (sum);
+        //System.out.println (sum);
         if (sum>num){
             return true;
         }
@@ -56,12 +56,12 @@ public class PositiveInteger {
         m=num;
         // Figure out the digits
         while (m>0) {
-            sum+=pow(m%10,digit);
+            sum+=(int) pow(m%10,digit);
             m=m/10;
         }
 
 
-        System.out.println (sum);
+        //System.out.println (sum);
         if (sum==num){
             return true;
         }
