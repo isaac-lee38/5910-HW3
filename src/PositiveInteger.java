@@ -27,10 +27,43 @@ public class PositiveInteger {
     }
 
     public boolean isAbundant() {
+
+        int sum=0;
+        if (num!=1) {
+            sum += 1;
+        }
+        for (int i =2 ; i<=sqrt(num);i++){
+            if (num%i==0){
+                sum+=i;
+                sum+= (num/i);
+            }
+        }
+        System.out.println (sum);
+        if (sum>num){
+            return true;
+        }
         return false;
     }
 
     public boolean isNarcissistic() {
+        int digit=0, m=num;
+        // Figure out the digits
+        while (m>0) {
+            digit += 1;
+            m=m/10;
+        }
+        int sum=0;
+        if (num!=1) {
+            sum += 1;
+        }
+        for (int i =2 ; i<=sqrt(num);i++){
+            if (num%i==0){
+                sum+=i;
+                sum+= (num/i);
+            }
+        }
+        System.out.println (sum);
+
         return false;
     }
 
