@@ -53,16 +53,18 @@ public class PositiveInteger {
             m=m/10;
         }
         int sum=0;
-        if (num!=1) {
-            sum += 1;
+        m=num;
+        // Figure out the digits
+        while (m>0) {
+            sum+=pow(m%10,digit);
+            m=m/10;
         }
-        for (int i =2 ; i<=sqrt(num);i++){
-            if (num%i==0){
-                sum+=i;
-                sum+= (num/i);
-            }
-        }
+
+
         System.out.println (sum);
+        if (sum==num){
+            return true;
+        }
 
         return false;
     }
