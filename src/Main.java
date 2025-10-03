@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        PositiveInteger number = new PositiveInteger(10);
+        System.out.println("Is perfect? " + number.isPerfect());
     }
 }
